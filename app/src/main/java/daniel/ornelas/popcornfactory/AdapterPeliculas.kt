@@ -15,9 +15,11 @@ class AdapterPeliculas: BaseAdapter {
     var peliculas = ArrayList<Pelicula>()
     var context: Context? = null
 
-    constructor(context: Context, peliculas: ArrayList<Pelicula>) {
+    constructor(context: Context, peliculas: ArrayList<Pelicula>?) {
         this.context = context
-        this.peliculas = peliculas
+        if (peliculas != null) {
+            this.peliculas = peliculas
+        }
 
 
     }
@@ -33,13 +35,19 @@ class AdapterPeliculas: BaseAdapter {
         image.setImageResource(pelicula.image)
         nombre.setText(pelicula.titulo)
 
+
         vista.iv_pelicula.setOnClickListener {
             var intent = Intent(context, DetallePelicula::class.java)
+            var seatsAvailable = 20 - pelicula.seats.size
             intent.putExtra("titulo", pelicula.titulo)
             intent.putExtra("image", pelicula.image)
             intent.putExtra("header", pelicula.header)
             intent.putExtra("sinopsis", pelicula.sinopsis)
+            intent.putExtra("numberOfSeats", seatsAvailable)
+            intent.putExtra("pos", position)
+            intent.putExtra("asientos_ocupados", pelicula.seats)
             context!!.startActivity(intent)
+
         }
         return vista
     }

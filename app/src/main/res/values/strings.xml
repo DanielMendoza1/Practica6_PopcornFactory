@@ -5,6 +5,11 @@
     <string name="btn_text">GET ME IN!</string>
     <string name="movies">MOVIES</string>
     <string name="series">SERIES</string>
-
-
+    <string name="detalle_compra">DETALLE DE COMPRA</string>
+    <string name="nombre_cliente">Nombre del comprador</string>
+    <string name="tipo_pago">Tipo de pago</string>
+    <string name="efectivo">Efectivo</string>
+    <string name="tarjeta">Tarjeta de credito/debito</string>
+    <string name="buy">Buy</string>
+    <string name="seat">Chosen Seat</string>
 </resources>

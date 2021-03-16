@@ -45,43 +45,4 @@
         android:layout_weight="4"/>
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight=".5"
-        android:orientation="horizontal"
-        android:layout_marginHorizontal="8sp"
-        >
-        <View
-            android:layout_width="0dp"
-            android:layout_weight="5"
-            android:layout_height="3dp"
-            android:background="@color/btn_color"
-            android:layout_gravity="center"
-            android:layout_marginHorizontal="5dp"/>
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:text="@string/series"
-            android:layout_gravity="center"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:fontFamily="sans-serif-condensed"
-            android:textColor="@color/btn_color" />
-
-
-
-    </LinearLayout>
-
-    <GridView
-        android:id="@+id/grid_series"
-        android:numColumns="3"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="4"/>
-
-
-
 </LinearLayout>
